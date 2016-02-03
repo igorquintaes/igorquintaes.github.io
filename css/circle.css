@@ -877,3 +877,63 @@
 .c100.orange.dark:hover > span {
   color: #e08833;
 }
+.c100.red .bar, .c100.red .fill {
+  border-color: #C00 !important;
+}
+.c100.red:hover > span {
+  color: #C00;
+}
+.c100.red.dark .bar, .c100.red.dark .fill {
+  border-color: #C00 !important;
+}
+.c100.red.dark:hover > span {
+  color: #C00;
+}
+.c100.purple .bar, .c100.purple .fill {
+  border-color: #4F2473 !important;
+}
+.c100.purple:hover > span {
+  color: #4F2473;
+}
+.c100.purple.dark .bar, .c100.purple.dark .fill {
+  border-color: #4F2473 !important;
+}
+.c100.purple.dark:hover > span {
+  color: #4F2473;
+}
+.c100.yellow .bar, .c100.yellow .fill {
+  border-color: #FFE100 !important;
+}
+.c100.yellow:hover > span {
+  color: #FFE100;
+}
+.c100.yellow.dark .bar, .c100.yellow.dark .fill {
+  border-color: #FFE100 !important;
+}
+.c100.yellow.dark:hover > span {
+  color: #FFE100;
+}
+.c100.blue .bar, .c100.blue .fill {
+  border-color: #67B0D1 !important;
+}
+.c100.blue:hover > span {
+  color: #67B0D1;
+}
+.c100.blue.dark .bar, .c100.blue.dark .fill {
+  border-color: #67B0D1 !important;
+}
+.c100.blue.dark:hover > span {
+  color: #67B0D1;
+}
+.c100.dblue .bar, .c100.dblue .fill {
+  border-color: #31708F !important;
+}
+.c100.dblue:hover > span {
+  color: #31708F;
+}
+.c100.dblue.dark .bar, .c100.dblue.dark .fill {
+  border-color: #31708F !important;
+}
+.c100.dblue.dark:hover > span {
+  color: #31708F;
+}

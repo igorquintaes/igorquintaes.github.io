@@ -170,3 +170,7 @@
     -webkit-filter: brightness(0.70);
     filter: brightness(0.25);
 }
+
+.cd-image-container {
+    border: 2px solid black;   
+}
