@@ -16,6 +16,22 @@
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
 		}
 	});
+    
+    $('.work-image-website').click(function(){
+        $('.expander img').attr("src", $(this).attr("src"));
+        $('.expander img').attr("alt", $(this).attr("alt"));
+        $('.expander h3').text($(this).attr("site-name"));
+        $('.expander p').text($(this).attr("site-description"));
+        $('.expander a').attr("href", $(this).attr("site-link"));
+        $('.expander').show(400);
+        $('.expander-fade').show();
+    });
+    
+    $('.close-expander').click(function(){
+        $('.expander').hide(300);
+        $('.expander-fade').hide();
+    });
+    
 
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {

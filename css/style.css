@@ -795,3 +795,113 @@ Parallax
 	}
 	
 }
+
+/* Img expander */
+
+.expander-fade {    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    
+    background-color: #000;
+    opacity: .5;
+    z-index: 150;
+    position: fixed;
+    display: none;
+}
+
+.expander {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: #ddd;
+    width: 95%;
+    text-align: left;
+    overflow: hidden;
+    transition: height 350ms ease;
+    margin: 0 auto;
+    display: none;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 300;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+}
+
+.img-expander .full-image {
+    width: 65%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;  
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.img-expander img {
+    display: inline;    
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.img-expander .img-details {
+    width: 35%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: static;   
+    padding: 0 40px 0 20px;
+}
+
+.img-expander .img-details h3 {
+    font-weight: 300;
+    font-size: 52px;
+    padding: 40px 0 10px;
+    margin-bottom: 10px;   
+}
+
+
+.img-expander .img-details p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #999;
+}
+
+.img-expander .img-details a {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border: 3px solid #333;
+    display: inline-block;
+    margin: 30px 0 0;
+    outline: none;    
+}
+
+.close-expander {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;   
+}
+
+.close-expander::before, .close-expander::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #888;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close-expander::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
