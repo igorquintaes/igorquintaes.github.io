@@ -803,26 +803,30 @@ Parallax
     right: 0;
     bottom: 0;
     left: 0;    
-    background-color: #000;
     opacity: .6;
     z-index: 150;
     position: fixed;
     display: none;
+    background-color: #000;
 }
 
 .expander {
-    position: fixed;
     top: 50%;
-    left: 50%;
-    background: #ddd;
+    left: 50%;;
     width: 95%;
+    z-index: 300;
+    margin: 0 auto;
+    position: fixed;
     text-align: left;
     overflow: hidden;
-    transition: height 350ms ease;
-    margin: 0 auto;
     display: none;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 300;
+    background: #ddd
+    -webkit-transition: height 350ms ease;
+    -moz-transition: height 350ms ease;
+    transition: height 350ms ease;
+    -webkit-transform: translateX(-50%) translateY(-50%);;
+    -moz-transform: translateX(-50%) translateY(-50%);;
+    transform: translateX(-50%) translateY(-50%);;
 }
 
 .img-expander .full-image {
