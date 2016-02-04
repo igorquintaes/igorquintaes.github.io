@@ -23,13 +23,13 @@
         $('.expander h3').text($(this).attr("site-name"));
         $('.expander p').text($(this).attr("site-description"));
         $('.expander a').attr("href", $(this).attr("site-link"));
-        $('.expander').show(400);
-        $('.expander-fade').show();
+        $('.expander').fadeIn(400);
+        $('.expander-fade').fadeIn();
     });
     
     $('.close-expander').click(function(){
-        $('.expander').hide(300);
-        $('.expander-fade').hide();
+        $('.expander').fadeOut(300);
+        $('.expander-fade').fadeOut();
     });
     
 
