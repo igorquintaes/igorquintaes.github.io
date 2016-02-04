@@ -168,7 +168,11 @@
 .work-image {
     max-width: 100%; 
     -webkit-filter: brightness(0.70);
-    filter: brightness(0.25);
+    filter: brightness(0.70);
+}
+
+.work-image-website {
+    max-width: 100%; 
 }
 
 .cd-image-container {
