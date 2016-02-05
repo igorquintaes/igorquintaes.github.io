@@ -33,7 +33,7 @@ function checkPosition(container) {
 
 //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
 function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-    dragElement.on("mousedown vmousedown", function(e) {
+    dragElement.on("mousedown vmousedown touchstart", function(e) {
         dragElement.addClass('draggable');
         resizeElement.addClass('resizable');
 
@@ -44,7 +44,7 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
             minLeft = containerOffset - (dragWidth/2),
             maxLeft = containerOffset + containerWidth - dragWidth + (dragWidth/2);
         
-        dragElement.parents().on("mousemove vmousemove", function(e) {
+        dragElement.parents().on("mousemove vmousemove touchstart", function(e) {
             leftValue = e.pageX + xPosition - dragWidth;
             
             //constrain the draggable element to move inside his container
@@ -56,7 +56,7 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
 
             widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
             
-            $('.draggable').css('left', widthValue).on("mouseup vmouseup", function() {
+            $('.draggable').css('left', widthValue).on("mouseup vmouseup touchend", function() {
                 $(this).removeClass('draggable');
                 resizeElement.removeClass('resizable');
             });
@@ -66,12 +66,12 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
             updateLabel(labelResizeElement, resizeElement, 'left');
             updateLabel(labelContainer, resizeElement, 'right');
             
-        }).on("mouseup vmouseup", function(e){
+        }).on("mouseup vmouseup touchend", function(e){
             dragElement.removeClass('draggable');
             resizeElement.removeClass('resizable');
         });
         e.preventDefault();
-    }).on("mouseup vmouseup", function(e) {
+    }).on("mouseup vmouseup touchend", function(e) {
         dragElement.removeClass('draggable');
         resizeElement.removeClass('resizable');
     });

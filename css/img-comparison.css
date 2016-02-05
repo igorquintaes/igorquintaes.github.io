@@ -172,7 +172,8 @@
 }
 
 .work-image-website {
-    max-width: 100%; 
+    max-width: 100%;
+    cursor: pointer;
 }
 
 .cd-image-container {

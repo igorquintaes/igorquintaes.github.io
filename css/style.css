@@ -820,13 +820,13 @@ Parallax
     text-align: left;
     overflow: hidden;
     display: none;
-    background: #ddd
+    background: #ddd;
     -webkit-transition: height 350ms ease;
     -moz-transition: height 350ms ease;
     transition: height 350ms ease;
-    -webkit-transform: translateX(-50%) translateY(-50%);;
-    -moz-transform: translateX(-50%) translateY(-50%);;
-    transform: translateX(-50%) translateY(-50%);;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .img-expander .full-image {
