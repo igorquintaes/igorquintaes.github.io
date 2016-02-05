@@ -156,6 +156,11 @@
     background-size: auto 100%;
 }
 
+.cd-resize-img.three {
+    background: url(../img/works/modified3.jpg) no-repeat left top; 
+    background-size: auto 100%;
+}
+
 .cd-image-label.special {
     color: #222;
     text-transform: uppercase;
