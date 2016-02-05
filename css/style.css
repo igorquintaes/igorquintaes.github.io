@@ -829,14 +829,63 @@ Parallax
     transform: translateX(-50%) translateY(-50%);
 }
 
+@media (max-width: 420px) {
+    .small-if-necessary  {
+        font-size: 33px !important;
+    }
+}
+    
+
+@media (max-width: 749px) {
+    .img-expander .full-image {
+        width: 80%;
+        margin: 0px auto;
+        padding: 15px;
+    }
+    
+    .img-expander .img-details {
+        padding: 15px 12%;
+        margin-top: -35px; 
+    }
+}
+
+@media (min-width: 750px) {
+    .img-expander .full-image {
+        float: left;      
+        width: 65%;  
+        padding: 50px 30px;
+    }
+    
+    .img-expander .img-details {
+        width: 35%;
+        float: left; 
+        padding: 0 40px 0 20px;       
+    }
+}
+
+@media (max-width: 749px) {
+      .img-expander .img-details h3 { 
+          font-size: 52px;
+      }
+}
+
+@media (min-width: 750px) and (max-width: 900px) {
+      .img-expander .img-details h3 { 
+          font-size: 40px;
+      }
+}
+
+@media (min-width: 901px) {
+      .img-expander .img-details h3 { 
+          font-size: 52px;
+      }
+}
+
 .img-expander .full-image {
-    width: 65%;
-    float: left;
     height: 100%;
     overflow: hidden;
     position: relative;  
     text-align: center;
-    padding: 50px 30px;
 }
 
 .img-expander img {
@@ -846,17 +895,13 @@ Parallax
 }
 
 .img-expander .img-details {
-    width: 35%;
-    float: left;
     height: 100%;
     overflow: hidden;
     position: static;   
-    padding: 0 40px 0 20px;
 }
 
 .img-expander .img-details h3 {
     font-weight: 300;
-    font-size: 52px;
     padding: 40px 0 10px;
     margin-bottom: 10px;   
 }
