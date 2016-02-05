@@ -72,7 +72,7 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
             dragElement.removeClass('cd-draggable');
             resizeElement.removeClass('cd-resizable');
 
-            dragElement.parent().unbind('mousemove.cd vmousemove.cd');
+            dragElement.parent().unbind('mousemove.cd vmousemove.cd ');
         });
 
         e.preventDefault();
