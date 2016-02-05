@@ -33,7 +33,7 @@ function checkPosition(container) {
 
 //draggable funtionality - credits to http://css-tricks.com/snippets/jquery/draggable-without-jquery-ui/
 function drags(dragElement, resizeElement, container, labelContainer, labelResizeElement) {
-    dragElement.on("mousedown vmousedown touchstart", function(e) {
+    dragElement.on("mousedown vmousedown touchstart touchmove", function(e) {
         dragElement.addClass('draggable');
         resizeElement.addClass('resizable');
 
@@ -44,7 +44,7 @@ function drags(dragElement, resizeElement, container, labelContainer, labelResiz
             minLeft = containerOffset - (dragWidth/2),
             maxLeft = containerOffset + containerWidth - dragWidth + (dragWidth/2);
         
-        dragElement.parents().on("mousemove vmousemove touchstart", function(e) {
+        dragElement.parents().on("mousemove vmousemove touchstart touchmove", function(e) {
             leftValue = e.pageX + xPosition - dragWidth;
             
             //constrain the draggable element to move inside his container
