@@ -13,7 +13,7 @@ addEvents:function email() {
         if (name != null && name.length > 0 &&
             email != null && email.length > 0 &&
             subject != null && subject.length > 0 &&
-            message != null && message.length > 0 &&)
+            message != null && message.length > 0)
         {
             var inlineMessage = "Nome: " + name + "</br>E-mail: " + email + "</br>Assunto: " + subject + "</br></br>Mensagem: " + message;
             
