@@ -24,5 +24,7 @@ addEvents:function email() {
                 dataType: "json"
             });
         }
+		
+		event.preventDefault();
     });
 }
