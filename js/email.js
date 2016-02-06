@@ -5,10 +5,10 @@ $(document).ready(function () {
 addEvents:function email() {
     $('#btnContactUs').on("click", function () {
         
-        var name = $("$name").val();
-        var email = $("email").val();
-        var subject = $("subject").val();
-        var message = $("message").val();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var subject = $("#subject").val();
+        var message = $("#message").val();
         
         if (name != null && name.length > 0 &&
             email != null && email.length > 0 &&
