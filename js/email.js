@@ -7,7 +7,7 @@ addEvents:function email() {
         
         var name = $("#name").val();
         var email = $("#email").val();
-        var subject = $("#subject").val();
+        var subject = $("#subject option:selected").text();
         var message = $("#message").val();
         
         if (name != null && name.length > 0 &&
@@ -21,10 +21,34 @@ addEvents:function email() {
                 url: "//formspree.io/igor.quintaes@fatec.sp.gov.br", 
                 method: "POST",
                 data: { message: inlineMessage },
-                dataType: "json"
-            });
+                dataType: "json",
+				success: function(data) {
+					$('.alert-message p').text('E-mail enviado com sucesso!');
+				},
+				error: function(data) {
+					$('.alert-message p').text('Ocorreu um erro ao enviar o e-mail. Tente novamente mais tarde.');
+				},
+				complete: function(data) {
+					$('.alert-header h3').text('Atenção!');
+					$('.alert-expander').fadeIn(400);
+					$('.alert-fade').fadeIn();
+				}
+			});
         }
 		
+		else
+		{
+			$('.alert-header h3').text('Atenção!');
+			$('.alert-message p').text('Verifique os campos antes de enviar o e-mail!');
+			$('.alert-expander').fadeIn(400);
+			$('.alert-fade').fadeIn();
+		}
+		
 		event.preventDefault();
+    });	
+    
+    $('.alert-close').click(function(){
+        $('.alert-expander').fadeOut(300);
+        $('.alert-fade').fadeOut();
     });
 }

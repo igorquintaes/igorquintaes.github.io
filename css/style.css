@@ -812,7 +812,7 @@ Parallax
 
 .expander {
     top: 50%;
-    left: 50%;;
+    left: 50%;
     width: 95%;
     z-index: 300;
     margin: 0 auto;
@@ -950,6 +950,99 @@ Parallax
 }
 
 .close-expander::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* alert expander */
+
+.alert-fade {    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    
+    opacity: .6;
+    z-index: 150;
+    position: fixed;
+    display: none;
+    background-color: #000;
+}
+
+.alert-expander {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+	padding: 15px 12%;
+    z-index: 500;
+    margin: 0 auto;
+    position: fixed;
+    text-align: left;
+    overflow: hidden;
+    display: none;
+    background: #ddd;
+    -webkit-transition: height 350ms ease;
+    -moz-transition: height 350ms ease;
+    transition: height 350ms ease;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+    
+@media (max-width: 399px) {
+      .alert-expander .alert-header h3 { 
+          font-size: 25px;
+      }
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+      .alert-expander .alert-header h3 { 
+          font-size: 30px;
+      }
+}
+
+@media (min-width: 600px) {
+      .alert-expander .alert-header h3  { 
+          font-size: 52px;
+      }
+}
+
+.alert-message {
+    height: 100%;
+    overflow: hidden;
+    position: static;   
+}
+
+.alert-message p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #999;
+}
+
+.alert-close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;   
+	z-index: 1000;
+}
+
+.alert-close::before, .alert-close::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #888;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.alert-close::after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
