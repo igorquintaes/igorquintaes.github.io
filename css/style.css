@@ -972,7 +972,6 @@ Parallax
 .alert-expander {
     top: 50%;
     left: 50%;
-    width: 70%;
 	padding: 15px 12%;
     z-index: 500;
     margin: 0 auto;
@@ -993,18 +992,30 @@ Parallax
       .alert-expander .alert-header h3 { 
           font-size: 25px;
       }
+	  
+	  .alert-expander {
+		  width: 70%;
+	  }
 }
 
 @media (min-width: 400px) and (max-width: 599px) {
       .alert-expander .alert-header h3 { 
-          font-size: 30px;
+          font-size: 25px;
       }
+	  
+	  .alert-expander {
+		  width: 60%;
+	  }
 }
 
 @media (min-width: 600px) {
       .alert-expander .alert-header h3  { 
-          font-size: 52px;
+          font-size: 30px;
       }
+	  
+	  .alert-expander {
+		  width: 50%;
+	  }
 }
 
 .alert-message {

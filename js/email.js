@@ -23,13 +23,14 @@ addEvents:function email() {
                 data: { message: inlineMessage },
                 dataType: "json",
 				success: function(data) {
+					$('.alert-header h3').text('Sucesso!');
 					$('.alert-message p').text('E-mail enviado com sucesso!');
 				},
 				error: function(data) {
+					$('.alert-header h3').text('Atenção!');
 					$('.alert-message p').text('Ocorreu um erro ao enviar o e-mail. Tente novamente mais tarde.');
 				},
 				complete: function(data) {
-					$('.alert-header h3').text('Atenção!');
 					$('.alert-expander').fadeIn(400);
 					$('.alert-fade').fadeIn();
 				}
