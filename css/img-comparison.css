@@ -161,6 +161,11 @@
     background-size: auto 100%;
 }
 
+.cd-resize-img.four {
+    background: url(../img/works/modified4.jpg) no-repeat left top; 
+    background-size: auto 100%;
+}
+
 .cd-image-label.special {
     color: #222;
     text-transform: uppercase;
