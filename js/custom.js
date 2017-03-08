@@ -1,4 +1,4 @@
-(function ($) {
+﻿(function ($) {
 
 	new WOW().init();
 
@@ -18,7 +18,10 @@
 	});
 	
 	$('.img-expander .img-details a').click(function() {
-		event.preventDefault();
+		if ($('.img-expander .img-details a').attr('href').length == 0
+){
+			event.preventDefault();
+		}
 	});
     
     $('.work-image-website').click(function(){
