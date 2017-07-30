@@ -5,6 +5,8 @@ $(document).ready(function () {
 addEvents:function email() {
     $('#btnContactUs').on("click", function () {
         
+		var lang = document.documentElement.lang;
+		
         var name = $("#name").val();
         var email = $("#email").val();
         var subject = $("#subject option:selected").text();
@@ -16,19 +18,36 @@ addEvents:function email() {
             message != null && message.length > 0)
         {
             var inlineMessage = "Nome: " + name + "</br>E-mail: " + email + "</br>Assunto: " + subject + "</br></br>Mensagem: " + message;
-            
+			
             $.ajax({
                 url: "//formspree.io/igor.quintaes@fatec.sp.gov.br", 
                 method: "POST",
                 data: { message: inlineMessage },
                 dataType: "json",
 				success: function(data) {
-					$('.alert-header h3').text('Sucesso!');
-					$('.alert-message p').text('E-mail enviado com sucesso!');
+					if (lang == "pt-BR")
+					{
+						$('.alert-header h3').text('Sucesso!');
+						$('.alert-message p').text('E-mail enviado com sucesso!');
+					}
+					else
+					{
+						$('.alert-header h3').text('Success!');
+						$('.alert-message p').text('E-mail sent successfully!');
+					}
+
 				},
 				error: function(data) {
-					$('.alert-header h3').text('Atenção!');
-					$('.alert-message p').text('Ocorreu um erro ao enviar o e-mail. Tente novamente mais tarde.');
+					if (lang == "pt-BR")
+					{
+						$('.alert-header h3').text('Atenção!');
+						$('.alert-message p').text('Ocorreu um erro ao enviar o e-mail. Tente novamente mais tarde.');
+					}
+					else
+					{
+						$('.alert-header h3').text('Warning!');
+						$('.alert-message p').text('An error occurred while tried to send the email. Please, try again later');
+					}
 				},
 				complete: function(data) {
 					$('.alert-expander').fadeIn(400);
@@ -39,8 +58,16 @@ addEvents:function email() {
 		
 		else
 		{
-			$('.alert-header h3').text('Atenção!');
-			$('.alert-message p').text('Verifique os campos antes de enviar o e-mail!');
+			if (lang == "pt-BR")
+			{
+				$('.alert-header h3').text('Atenção!');
+				$('.alert-message p').text('Verifique os campos antes de enviar o e-mail!');
+			}
+			else
+			{
+				$('.alert-header h3').text('Warning!');
+				$('.alert-message p').text('Check all fields before send the e-mail!');
+			}
 			$('.alert-expander').fadeIn(400);
 			$('.alert-fade').fadeIn();
 		}

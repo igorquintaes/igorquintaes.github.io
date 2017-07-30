@@ -25,6 +25,8 @@
 	});
     
     $('.work-image-website').click(function(){
+		var lang = document.documentElement.lang;
+		
         $('.expander img').attr("src", $(this).attr("src"));
         $('.expander img').attr("alt", $(this).attr("alt"));
         $('.expander h3').text($(this).attr("site-name"));
@@ -32,14 +34,26 @@
 		
 		if ($(this).attr("site-is-online").toLowerCase() == 'false')
 		{
-			$('.expander a').text("Site indisponível");
+			if (lang == "pt-BR") {
+				$('.expander a').text("Site indisponível");
+			}
+			else {
+				$('.expander a').text("Site Not Available");
+			}
+			
 			$('.expander a').attr("href", "");
 			$('.expander a').attr("target", "");
 		}
 		else
 		{		
+			if (lang == "pt-BR") {
+				$('.expander a').text("Acesse o site");		
+			}
+			else {
+				$('.expander a').text("Visit the website");		
+			}
+			
 			$('.expander a').attr("target", "_blank");
-			$('.expander a').text("Acesse o site");		
 			$('.expander a').attr("href", $(this).attr("site-link"));
 		}		
 		
